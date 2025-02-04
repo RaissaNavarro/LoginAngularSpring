@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
 import { DefaultLoginLayoutComponent } from '../../components/default-login-layout/default-login-layout.component';
 import { ReactiveFormsModule, FormControl, FormGroup, Validators } from "@angular/forms"
+import { PrimaryInputComponent } from '../../components/primary-input/primary-input.component';
 
 @Component({
   selector: 'app-login',
   standalone: true,
   imports: [
     DefaultLoginLayoutComponent,
-    ReactiveFormsModule
+    ReactiveFormsModule, 
+    PrimaryInputComponent,
+
   ],
 
   templateUrl: './login.component.html',
@@ -23,4 +26,9 @@ export class LoginComponent {
     })
 
   }
+
+  submit(){
+    console.log(this.loginForm.value)
+  }
 }
+
