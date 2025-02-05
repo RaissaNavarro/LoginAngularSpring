@@ -10,10 +10,20 @@ export class DefaultLoginLayoutComponent {
   @Input() title: string = "";
   @Input() primaryBtnText: string = "";
   @Input() secondaryBtnText: string = "";
-  @Output("submit") onSubmit = new EventEmitter();
+  @Input() disablePrimaryBtn: boolean = true;
+  @Output("submit") onSubmit = new EventEmitter(); // esse output é pra logar
+
+  @Output("navigate")onNavigate = new EventEmitter(); // esse é o de cadastro
+
+
 
   submit(){
     this.onSubmit.emit();
+    
+  }
+
+  navigate(){
+    this.onNavigate.emit();
     
   }
 
