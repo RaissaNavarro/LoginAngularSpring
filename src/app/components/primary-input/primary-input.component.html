@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="input-wrapper">
     <label [for]="inputName">{{ label }}</label>
     <div class="input-content">
@@ -12,4 +13,20 @@
             </ng-content>
         </div>
     </div>
+=======
+<div class="input-wrapper">
+    <label [for]="inputName">{{ label }}</label>
+    <div class="input-content">
+        <input 
+            [type]="type" 
+            [placeholder]="placeholder"
+            [value]="value"
+            (input)="onInput($event)"
+        />
+        <div class="icon">
+            <ng-content>
+            </ng-content>
+        </div>
+    </div>
+>>>>>>> cc26556fa135cd9363bd5784da3d9b3bc657893c
 </div>
