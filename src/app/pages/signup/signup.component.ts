@@ -10,7 +10,7 @@ interface SignupForm {
   name: FormControl,
   email: FormControl,
   password: FormControl,
-  passwordConfirm: FormControl, 
+  passwordConfirm: FormControl
 }
 
 @Component({
@@ -27,7 +27,7 @@ interface SignupForm {
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.scss'
 })
-export class SignupComponent {
+export class SignUpComponent {
   signupForm!: FormGroup<SignupForm>;
 
   constructor(
@@ -39,7 +39,7 @@ export class SignupComponent {
       name: new FormControl('', [Validators.required, Validators.minLength(3)]),
       email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [Validators.required, Validators.minLength(6)]),
-      passwordConfirm: new FormControl('', [Validators.required, Validators.minLength(6)])
+      passwordConfirm: new FormControl('', [Validators.required, Validators.minLength(6)]),
     })
   }
 
